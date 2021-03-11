@@ -6,19 +6,21 @@
     <body>
         <h1>My family book</h1>
         <img id="My family" src="My family book.jpeg">
-        <h3 id="h3">My family book</h3>
+        <h3 id="h33">My family book</h3>
         <button onclick="nextslide()" id="next_slide">Next slide</button>
         <script>
-            var photoes = ["my dad.jpeg", "my mom.jpeg"];
-            var dad = "DAD"
-            var mom = "MOM"
-            var name = [dad, mom];
-            console.log(photoes);
-            console.log(name)
+            var photoes = ["my dad.jpeg", "my mom.jpeg", "My family book.jpeg"];
+            var DAD = "dad";
+            var MOM = "mom";
+            var MY_FAMILY_BOOK = "My family book";
+            var array_name = [DAD, MOM, MY_FAMILY_BOOK];
             var i = 0;
             function nextslide(){
-                document.getElementById("h3").innerHTML = name[i];
-                document.getElementById("My family").src = photoes[i];i++
+                if (i > 2){
+                    i = 0;
+                }
+                document.getElementById("h33").innerHTML = array_name[i];
+                document.getElementById("My family").src = photoes[i];i++;
             }
         </script>
     </body>
